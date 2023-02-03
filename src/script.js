@@ -74,8 +74,11 @@ bakedTexture.encoding = THREE.sRGBEncoding;
  */
 const lampColor = new THREE.Color("hsla(37, 69%, 81%, 1)");
 const poleLightMaterial = new THREE.MeshBasicMaterial({ color: lampColor });
+poleLightMaterial.side = THREE.DoubleSide;
+
 const portalColor = new THREE.Color("hsla(157, 100%, 94%, 1)");
 const portalLightMaterial = new THREE.MeshBasicMaterial({ color: portalColor });
+portalLightMaterial.side = THREE.DoubleSide;
 
 // Baked material
 const bakedMaterial = new THREE.MeshBasicMaterial({ map: bakedTexture });
