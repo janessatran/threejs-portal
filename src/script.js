@@ -9,9 +9,9 @@ import { LoadingManager } from "three";
  * Base
  */
 // Debug
-const gui = new dat.GUI({
-  width: 400,
-});
+// const gui = new dat.GUI({
+//   width: 400,
+// });
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
