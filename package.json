@@ -9,7 +9,8 @@
     "preview": "vite preview --port 8080"
   },
   "devDependencies": {
-    "vite": "^4.0.4"
+    "vite": "^4.0.4",
+    "vite-plugin-glsl": "^1.1.2"
   },
   "dependencies": {
     "lil-gui": "^0.17.0",
