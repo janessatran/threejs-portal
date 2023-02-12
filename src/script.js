@@ -254,7 +254,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-debugObject.clearColor = "#544054";
+debugObject.clearColor = "#96a682";
 renderer.setClearColor(debugObject.clearColor);
 gui
   .addColor(debugObject, "clearColor")
