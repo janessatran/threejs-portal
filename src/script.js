@@ -86,8 +86,8 @@ const portalColor = new THREE.Color("hsla(157, 100%, 94%, 1)");
 const portalLightMaterial = new THREE.ShaderMaterial({
   uniforms: {
     uTime: { value: 0 },
-    uColorStart: { value: new THREE.Color(0xb2aada) },
-    uColorEnd: { value: new THREE.Color(0xffbb00) },
+    uColorStart: { value: new THREE.Color(0xcca3a3) },
+    uColorEnd: { value: new THREE.Color(0x7659a1) },
   },
   vertexShader: portalVertexShader,
   fragmentShader: portalFragmentShader,
@@ -106,6 +106,9 @@ gui.addColor(debugObject, "portalColorStart").onChange(() => {
 gui.addColor(debugObject, "portalColorEnd").onChange(() => {
   portalLightMaterial.uniforms.uColorEnd.value.set(debugObject.portalColorEnd);
 });
+
+const light = new THREE.AmbientLight(0x404040); // soft white light
+scene.add(light);
 
 // Baked material
 const bakedMaterial = new THREE.MeshBasicMaterial({ map: bakedTexture });
@@ -180,7 +183,7 @@ const firefliesMaterial = new THREE.ShaderMaterial({
   transparent: true,
   uniforms: {
     uPixelRatio: { value: Math.min(window.devicePixelRatio, 2) },
-    uSize: { value: 100 },
+    uSize: { value: 168 },
     uTime: { value: 0 },
   },
   vertexShader: firefliesVertexShader,
@@ -251,7 +254,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-debugObject.clearColor = "#1f2e37";
+debugObject.clearColor = "#544054";
 renderer.setClearColor(debugObject.clearColor);
 gui
   .addColor(debugObject, "clearColor")
